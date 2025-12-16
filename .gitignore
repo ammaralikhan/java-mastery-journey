@@ -1,0 +1,22 @@
+curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/main/Java.gitignore
+
+# Append DevOps & personal tooling
+cat >> .gitignore <<EOL
+
+# VSCode
+.vscode/
+
+# Multipass / VM mounts
+mnt/
+
+# Gradle
+.gradle/
+
+# macOS
+.DS_Store
+
+# Secrets (NEVER COMMIT)
+*.env
+*.tfvars
+secrets/
+EOL
